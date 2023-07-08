@@ -1,0 +1,604 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Ini adalah deskripsi halaman Anda." />
+<meta name="keywords" content="kata kunci, yang, relevan, dengan, halaman, Anda" />
+<meta name="keywords" content="kata kunci, yang, relevan, dengan, halaman, Anda" />
+<meta name="language" content="en" />
+<meta name="contributor" content="Nama Penyusun" />
+<meta name="copyright" content="Tahun Hak Cipta, Pemilik Hak Cipta" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<style class="styles">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    .logo img{
+        width: 4rem;
+/*        margin-top: 100px;*/
+    }
+
+    .hero-section-mz2 {
+/*        padding: 30px 100px;*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: auto;
+        height: 100vh;
+    }
+
+    .left-hero-mz2 {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        padding: 50px 80px;
+        min-height: 100vh;
+    }
+
+    .left-hero-mz2 h1 {
+        width: 100%;    
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 10px;
+        line-height: 60px;
+        color: #141c24;
+        margin-top: 10px;
+    }
+
+    .left-hero-mz2 p {
+        width: 100%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 28px;
+/*        color: #344051*/
+    }
+
+    .container-button-mz2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .hero-button1-mz2 {
+        width: 48%;
+        height: 70px;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 10px 20px;
+        outline: none;
+        border: 2px solid lightgrey;
+        font-style: normal;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .hero-button1-mz2:hover {
+        filter: brightness(90%);
+    }
+
+    .hero-button1-mz2:active {
+        transform: scale(0.98);
+        transition: 0.3s;
+    }
+
+    .hero-button2-mz2 {
+        width: 48%;
+        height: 70px;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 10px 20px;
+        outline: none;
+        border: 2px solid lightgrey;
+        font-style: normal;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .hero-button2-mz2:hover {
+        filter: brightness(90%);
+    }
+
+    .hero-button2-mz2:active {
+        transform: scale(0.98);
+        transition: 0.3s;
+    }
+
+    .hero-button1-mz2 img {
+        position: relative;
+        margin-right: 10px;
+        width: 2rem;
+        height: 2rem;
+    }
+
+
+    .hero-button2-mz2 img {
+        position: relative;
+        margin-right: 10px;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .hero-button2-mz2 p {
+        width: max-content;
+    }
+
+
+    .hero-button1-mz2 p {
+        width: max-content;
+    }
+
+    .continer-star-mz2 {
+        display: flex;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .right-hero-mz2 {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #025dd5;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .right-hero-mz2 h2 {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .right-hero-mz2 p {
+        color: #FFA;
+    }
+
+    .card-image-mz2 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px
+    }
+
+    .pembatas{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .pembatas p {
+        width: max-content;
+        margin: 0 10px;
+        color: #a9a29c;
+    }
+
+    .pembatas-satu {
+        width: 165px;
+        border:1px solid #a9a29c;
+    }
+    .pembatas-dua {
+        width: 165px;
+        border: 1px solid #a9a29c;
+    }
+    .wrap-input {
+        width: max-content;
+        display: flex;
+        margin-bottom: 30px;
+        width: 100%;
+        padding-left: 30px;
+        overflow: hidden;
+        border: 1px solid grey;
+        align-items: center;
+        border-radius: 10px;
+        justify-content: start;
+    }
+    .wrap-input img {
+        width: 20px;
+        margin-left: -10px;
+        filter: gray;
+        -webkit-filter: grayscale(1);
+    }
+    .form-login {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .wrap-input input {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 14px 10px;
+        font-size: 16px;
+    }
+    .remember-me {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .remember {
+        display: flex;
+        width: max-content;
+        align-items: center;
+    }
+
+    .remember p {
+        margin-left: 10px;
+    }
+
+    .remember-me input {
+        width: 20px;
+        border-radius: 4px;
+        height: 20px;
+    }
+
+    .btn-login button {
+        width: 100%;
+        background-color: blue;
+        border: none;
+        padding: 20px 0;
+        font-size: 15px;
+        color: white;   
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+        margin: 30px 0px;
+    }
+
+    .btn-login button:hover {
+        filter: brightness(90%);
+    }
+
+    .btn-login button:active {
+        transform: scale(0.98);
+        transition: 0.3s;
+    }
+    .dont-have-acc {
+
+        width: 100%;
+        text-align: center;
+    }
+    .dont-have-acc a {
+        color: blue;
+        margin-left: 10px;
+    }
+    .forgot {
+        color: blue;
+    }
+
+    .image-galerry-mz2 {
+        width: 70%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    @media only screen and (min-width: 340px) and (max-width:1007px) {
+        body {
+            padding: 0px;
+            height: 138vh;
+        }
+
+        .logo img {
+            margin-top: 30px;
+        }
+
+        .hero-section-mz2 {
+            flex-direction: column;
+            width: auto;
+            overflow: auto;
+            padding: 0;
+            height: max-content;
+        }
+
+        .container-button-mz2 button {
+            width: 48%;
+            height: 60px;
+        }
+
+        .container-button-mz2 button img {
+            width: 20px;
+            height: auto;
+        }
+
+        .image-galerry-mz2 {
+            width: 350px;
+            height: 300px;
+            object-fit: cover;
+            object-position: top
+        }
+        .left-hero-mz2 {
+            height: max-content;
+            overflow: auto;
+        }
+        .left-hero-mz2 h1 {
+            font-size: 40px;
+            line-height: 1.3em;
+        }
+
+        .pembatas p {
+            font-size: 10px;
+        }
+
+        .pembatas-satu, .pembatas-dua {
+            width: 20%;
+        }
+
+        .left-hero-mz2 p {
+            font-size: 15px;
+        }
+
+        .card-image-mz2 {
+            display: none
+        }
+        .left-hero-mz2 {
+            width: 90%;
+            padding: 10px;
+            height: max-content;
+        }
+        .right-hero-mz2 {
+            display: none;
+        }
+        .wrap-input {
+            padding-left: 20px  ;
+        }
+        .wrap-input input {
+            padding: 15px 10px;
+            font-size: 15px;
+        }
+        .btn-login button {
+            width: 100%;
+            background-color: blue;
+            border: none;
+            padding: 20px 0;
+            font-size: 15px;
+            color: white;   
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            margin: 30px 0px;
+        }
+
+        .btn-login button:hover {
+            filter: brightness(90%);
+        }
+
+        .btn-login button:active {
+            transform: scale(0.98);
+            transition: 0.3s;
+        }
+        .dont-have-acc {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center;
+        }
+        .dont-have-acc a {
+            color: blue;
+            margin-left: 10px;
+        }
+        .forgot {
+            color: blue;
+        }
+
+        .image-galerry-mz2 {
+            width: 70%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width:576px) {
+        body {
+            padding: 0px;
+            height: 138vh;
+        }
+
+        .logo img {
+            margin-top: 30px;
+        }
+
+        .hero-section-mz2 {
+            flex-direction: column;
+            width: 100vw;
+            overflow: auto;
+            padding: 0;
+            height: max-content;
+        }
+
+        .container-button-mz2 button {
+            width: 48%;
+            height: 60px;
+        }
+
+        .container-button-mz2 button img {
+            width: 20px;
+            height: auto;
+        }
+
+        .image-galerry-mz2 {
+            width: 350px;
+            height: 300px;
+            object-fit: cover;
+            object-position: top
+        }
+        .left-hero-mz2 {
+            height: max-content;
+            overflow: auto;
+        }
+        .left-hero-mz2 h1 {
+            font-size: 40px;
+            line-height: 1.3em;
+        }
+
+        .pembatas p {
+            font-size: 10px;
+        }
+
+        .pembatas-satu, .pembatas-dua {
+            width: 20%;
+        }
+
+        .left-hero-mz2 p {
+            font-size: 15px;
+        }
+
+        .card-image-mz2 {
+            display: none
+        }
+        .left-hero-mz2 {
+            width: 90%;
+            padding: 10px;
+            height: max-content;
+        }
+        .right-hero-mz2 {
+            display: none;
+        }
+        .wrap-input {
+            padding-left: 25px;
+        }
+        .wrap-input input {
+            padding: 15px 10px;
+            font-size: 15px;
+        }
+        .btn-login button {
+            width: 100%;
+            background-color: blue;
+            border: none;
+            padding: 20px 0;
+            font-size: 15px;
+            color: white;   
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            margin: 30px 0px;
+        }
+
+        .btn-login button:hover {
+            filter: brightness(90%);
+        }
+
+        .btn-login button:active {
+            transform: scale(0.98);
+            transition: 0.3s;
+        }
+        .dont-have-acc {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center;
+        }
+        .dont-have-acc a {
+            color: blue;
+            margin-left: 10px;
+        }
+        .forgot {
+            color: blue;
+        }
+
+        .image-galerry-mz2 {
+            width: 70%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+</style>
+<div class="template">
+    <section class="hero-section-mz2">
+        <div class="left-hero-mz2">
+            <div class="logo">
+                <img src="logo.jpg">
+            </div>
+            <div>
+                <h1>Log in to your Account</h1>
+                <p>Welcome back! Select method to log in:</p>
+            </div>
+            <div>
+                <div class="container-button-mz2">
+                    <button class="hero-button1-mz2">
+                        <img src="google.png" alt="aktor">
+                        <p>
+                            Google                            
+                        </p>
+                    </button>
+                    <button class="hero-button2-mz2">
+                        <img src="fv.png" alt="aktor"><p>Facebook</p>
+                    </button>
+                </div>
+            </div>
+            <div class="pembatas">
+                <div class="pembatas-satu"></div>
+                    <p>or continue with email</p>
+                <div class="pembatas-dua"></div>
+            </div>
+            <div class="form-login">
+                <div class="wrap-input">
+                     <img src='./envelope-solid.svg' alt="img" />
+                    <input type="email" name="email" placeholder="Email">                    
+                </div>
+                <div class="wrap-input">
+                    <img src='./lock-solid.svg' alt="img" />
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="remember-me">
+                <div class="remember">
+                     <input type="checkbox" name=""> 
+                     <p>Remember me</p>                    
+                </div>
+                <div>
+                    <a href="">
+                    <p class="forgot">Forgot Password?</p>                        
+                    </a>
+                </div>                                    
+            </div>
+            <div class="btn-login">
+                <button>Log in</button>
+            </div>
+            <div class="dont-have-acc">
+                <p>Don't have an account? <a href="">Create an account</a></p>
+            </div>
+        </div>
+        <div class="right-hero-mz2">
+            <img src="logingambar.png" alt="_Gallery" class="image-galerry-mz2">
+            <h2>Connect with every application</h2>
+            <p>Everyting you need in an easly customieable dashboard </p>
+        </div>
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
